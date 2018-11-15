@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+
+
+<style>
+.mySlides {display:none;}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: orange;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: pink;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.active {
+  background-color: purple;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+o{
+color:blue;
+}
+body{
+background-image:url("45.jpg");
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
+
+</style>
+<body>
+ 
+
+
+<marquee   scrollamount="10" style="color: blue"  ><font size="10">Online Magazine System</font>  </marquee>
+<div class="w3-panel w3-centerbar w3-light-grey">
+    <o><p class="w3-small w3-serif" ><i><b><font size="4">"Everything we do is designed, whether we're producing a magazine,
+     a website, or a bridge. Design is really the creative invention that designs everything.
+"</font></b></i></p></o>
+   
+  </div>
+
+<div class="navbar">
+  
+   <a class="active" href="head.html"> Home</a> 
+  <a class="active" href="mem_login.html"> Author login</a> 
+    <a class="active" href="admin_login.html"> Admin login</a> 
+      <a class="active" href="mod_login.html">  Reviewer login</a>  
+   
+  
+</div>
+<div class="w3-content w3-section" style="width:450px">
+  <img class="mySlides" src="magazine3.jpg" style="width:150%" height="325">
+
+  <img class="mySlides" src="magazine1home.jpg" style="width:150%" height="325">
+  <img class="mySlides" src="magazine2.jpg" style="width:150%" height="325">
+   <img class="mySlides" src="1.jpg" style="width:150%" height="325">
+    <img class="mySlides" src="3.jpg" style="width:150%" height="325">
+    
+</div>
+
+<script>
+var myIndex = 0;
+carousel()
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html> 

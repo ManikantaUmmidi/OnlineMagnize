@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Administrator Login page</TITLE>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <script language=javascript>
+ function window_onload() 
+	{
+          document.form1.submit1.disabled=true;
+          document.form1.uid.focus();
+	}
+
+ function password1_onfocus() 
+   {
+       if(document.form1.uid.value=="")
+	   {
+		 document.form1.uid.focus();
+		 return false;
+	   }
+      else
+	   {
+		 document.form1.submit1.disabled=false;
+	   }
+	}
+
+function validate()
+	{
+	  if(document.form1.pass.value=="")
+	   {
+	     alert("Please enter password...");
+         document.form1.pass.focus();
+		 return false;
+		 }
+		 
+       if(document.form1.pass.value.length<4)
+	   {
+         alert("Password should be atleast 4 charecters");
+         document.form1.pass.focus();
+		 return false;
+		 }
+      return true;
+	}
+</script>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.bg-img {
+  /* The image used */
+  background-image: url("image2.jpg");
+
+  min-height: 150%;
+
+  /* Center and scale the image nicely */
+  background-position:top-left;
+  background-repeat: no-repeat;
+
+  /* Needed to position the navbar */
+  position: relative;
+  
+}
+
+/* Position the navbar container inside the image */
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: yellow;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  font-style:italic;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: purple;
+}
+
+.active {
+  background-color: purple;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+body{
+background-image:url("api.jpg");
+background-repeat: no-repeat;
+background-size: 100%;
+}
+</style>
+
+</HEAD>
+
+ <br>
+
+ <br>
+ 
+<div class="navbar">
+
+  <a class="active" href="head.html"> Home</a> 
+  <a class="active" href="mem_login.html"> Author login</a> 
+  <a class="active" href="mod_login.html"> Reviewer Login</a>
+</div>
+<h1 align="center" style="font-style: italic;font-size: 50; color:red">Admin login</h1>
+
+<div class="bg-img">
+<br>
+<BODY  LANGUAGE=javascript onload="return window_onload()">
+<br><br>
+<center>
+<br>
+<form name="form1" id="form1" action="logver.jsp" onsubmit="return validate()">
+<table align="center" cellpadding="3" cellspacing="5"  >
+  <tr><td><font size="5" color="pink">User Name</font></td>
+       <td><input type="text" name="uid"></td>
+  </tr>
+  <tr><td><font size="5"  color="pink">Password </font></td>
+       <td><input type="password" name="pass" LANGUAGE=javascript onfocus="return password1_onfocus()"></td>
+  </tr>
+  <tr>
+       <td colspan="2" align="center"><input type="submit" value="LOGIN" class="sub" name="submit1"></td>
+  </tr>
+  </table>
+  </div>
+  
+</form>
+</center>
+</BODY>
+</HTML>
